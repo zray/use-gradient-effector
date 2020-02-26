@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(var(--sample-columns, 8), 1fr);
+  grid-template-rows: repeat(var(--sample-rows, 6), 1fr);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.box {
+  background: var(--sample-color);
+  opacity: 0;
+  transition: 0.5s all var(--fast-out-slow-in);
+
+  &.hover {
+    opacity: 1;
+    transition: 0.2s all var(--fast-out-slow-in);
+  }
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}

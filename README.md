@@ -15,15 +15,21 @@ npm install --save use-gradient-effector
 ```jsx
 import React, { Component } from 'react'
 
-import { useMyHook } from 'use-gradient-effector'
+import { useGradientEffector } from 'use-gradient-effector'
 
 const Example = () => {
-  const example = useMyHook()
+  const gradientValues = useGradientEffector()
   return (
     <div>{example}</div>
   )
 }
 ```
+
+## Todo
+[] Get columns working again
+[] Add noise layer and multiplier
+[] Make use of other channels for layers
+[] Add linear/radial argument
 
 ## License
 
