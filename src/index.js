@@ -2,13 +2,6 @@ import { useRef, useEffect, useState } from "react";
 import Convert from "@alchemyalcove/rgb-to-hsl";
 import uuid from "uuid";
 
-// TODOS:
-// - Get columns working again
-// - Add noise layer and multiplier
-// - Make use of other channels for layers
-// - Add linear/radial argument
-
-
 const useGradientEffector = ({
   dimensions: { width, height } = {},
   position: { x, y } = {},
