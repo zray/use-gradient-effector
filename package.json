@@ -1,6 +1,6 @@
 {
   "name": "use-gradient-effector",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Modify a matrix of values with an offscreen gradient",
   "author": "zray",
   "license": "MIT",
