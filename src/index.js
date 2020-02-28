@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from "react";
-// import RGBtoHSL from "@alchemyalcove/rgb-to-hsl";
 import { v4 as uuid } from "uuid";
 
 const RGBtoHSL = rgb => {
