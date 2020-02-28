@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/use-gradient-effector/static/css/main.bc9a7558.chunk.css",
-    "main.js": "/use-gradient-effector/static/js/main.a15610b6.chunk.js",
-    "main.js.map": "/use-gradient-effector/static/js/main.a15610b6.chunk.js.map",
+    "main.js": "/use-gradient-effector/static/js/main.35c5cef0.chunk.js",
+    "main.js.map": "/use-gradient-effector/static/js/main.35c5cef0.chunk.js.map",
     "runtime-main.js": "/use-gradient-effector/static/js/runtime-main.0b3dc29c.js",
     "runtime-main.js.map": "/use-gradient-effector/static/js/runtime-main.0b3dc29c.js.map",
-    "static/js/2.bb92c4dc.chunk.js": "/use-gradient-effector/static/js/2.bb92c4dc.chunk.js",
-    "static/js/2.bb92c4dc.chunk.js.map": "/use-gradient-effector/static/js/2.bb92c4dc.chunk.js.map",
+    "static/js/2.f9a7974c.chunk.js": "/use-gradient-effector/static/js/2.f9a7974c.chunk.js",
+    "static/js/2.f9a7974c.chunk.js.map": "/use-gradient-effector/static/js/2.f9a7974c.chunk.js.map",
     "index.html": "/use-gradient-effector/index.html",
-    "precache-manifest.980c3a7eda208596bca9b1f19de7acc8.js": "/use-gradient-effector/precache-manifest.980c3a7eda208596bca9b1f19de7acc8.js",
+    "precache-manifest.ca25fc1444ab27f851ae7c82b52c8441.js": "/use-gradient-effector/precache-manifest.ca25fc1444ab27f851ae7c82b52c8441.js",
     "service-worker.js": "/use-gradient-effector/service-worker.js",
     "static/css/main.bc9a7558.chunk.css.map": "/use-gradient-effector/static/css/main.bc9a7558.chunk.css.map",
-    "static/js/2.bb92c4dc.chunk.js.LICENSE.txt": "/use-gradient-effector/static/js/2.bb92c4dc.chunk.js.LICENSE.txt"
+    "static/js/2.f9a7974c.chunk.js.LICENSE.txt": "/use-gradient-effector/static/js/2.f9a7974c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0b3dc29c.js",
-    "static/js/2.bb92c4dc.chunk.js",
+    "static/js/2.f9a7974c.chunk.js",
     "static/css/main.bc9a7558.chunk.css",
-    "static/js/main.a15610b6.chunk.js"
+    "static/js/main.35c5cef0.chunk.js"
   ]
 }
