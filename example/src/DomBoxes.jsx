@@ -43,19 +43,21 @@ const App = () => {
       ref={gradientRef}
       onMouseMove={mouseHandler}
     >
-      <div className={styles.boxes}>
+      <div
+        className={styles.boxes}
+        style={{
+          "--sample-columns": config.columns,
+          "--sample-rows": config.rows
+        }}
+      >
         {shaderOutput &&
           shaderOutput.map(({ hue, lightness, key }) => {
             const colorString = `hsl(${hue}, 0%, ${lightness}%)`;
             return (
               <div
-                className={cn(styles.box, {
-                  [styles.hover]: lightness < 20
-                })}
+                className={cn(styles.box, styles.hover)}
                 style={{
-                  "--sample-color": colorString,
-                  "--sample-columns": config.columns,
-                  "--sample-rows": config.rows
+                  "--sample-color": colorString
                 }}
                 key={key}
               />

@@ -26,10 +26,9 @@ const Example = () => {
 ```
 
 ## Todo
-[] Get columns working again
-[] Add noise layer and multiplier
-[] Make use of other channels for layers
-[] Add linear/radial argument
+- [] Add noise layer and multiplier
+- [] Make use of other channels for layers
+- [] Add linear/radial argument
 
 ## License
 
