@@ -80,7 +80,7 @@ const App = () => {
       ctx.restore();
     }
     ctx.fill();
-  }, [shaderOutput, dimensions, config]);
+  }, [shaderOutput, dimensions, columnWidth, rowHeight]);
 
   return (
     <div
