@@ -1,6 +1,6 @@
 {
   "name": "use-gradient-effector",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Modify a matrix of values with an offscreen gradient",
   "author": "zray",
   "license": "MIT",
@@ -72,7 +72,6 @@
     "rollup-plugin-peer-deps-external": "^2.2.2"
   },
   "dependencies": {
-    "@alchemyalcove/rgb-to-hsl": "^1.0.5",
     "uuid": "^7.0.1"
   }
 }
