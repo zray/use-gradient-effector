@@ -7,8 +7,9 @@ import styles from "./styles.module.scss";
 // Dummy position for initial state
 const initialPosition = { x: 25, y: 25 };
 const config = {
-  columns: 12,
-  rows: 8
+  columns: 24,
+  rows: 16,
+  depth: 100
 };
 
 const App = () => {
@@ -41,10 +42,25 @@ const App = () => {
     });
   };
 
+  // Render tiles offscreen so we can select depending on lightness
+  const offscreenRef = useRef(null);
+  useEffect(() => {
+    if (!offscreenRef.current && columnWidth && rowHeight) {
+      offscreenRef.current = Array(config.depth).fill();
+      for (let i = 0; i < config.depth; i += 1) {
+        offscreenRef.current[i] = new OffscreenCanvas(columnWidth, rowHeight);
+        const offScreenContext = offscreenRef.current[i].getContext("2d");
+        offScreenContext.fillStyle = `hsl(0,0%,${i + 1}%)`;
+        offScreenContext.fillRect(0, 0, columnWidth, rowHeight);
+      }
+    }
+  }, [columnWidth, rowHeight]);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d", { alpha: false });
-    const drawBox = ({ column, row }) => {
+
+    const drawImage = ({ column, row }) => {
       const data = shaderOutput[column * row];
       const flooredLightness = Math.floor(data.lightness);
       const fillObject = {
@@ -54,9 +70,9 @@ const App = () => {
         height: rowHeight,
         color: `hsl(0, 0%, ${flooredLightness}%)`
       };
-      ctx.fillStyle = fillObject.color;
 
-      ctx.fillRect(
+      ctx.drawImage(
+        offscreenRef.current[flooredLightness],
         fillObject.x,
         fillObject.y,
         fillObject.width,
@@ -74,13 +90,13 @@ const App = () => {
       ctx.save();
       for (let column = 0; column < config.columns; column += 1) {
         for (let row = 0; row < config.rows; row += 1) {
-          drawBox({ column, row });
+          drawImage({ column, row });
         }
       }
       ctx.restore();
     }
     ctx.fill();
-  }, [shaderOutput, dimensions, config]);
+  }, [shaderOutput, dimensions, columnWidth, rowHeight]);
 
   return (
     <div
